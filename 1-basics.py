@@ -126,7 +126,7 @@ print("Quotient: " + str(quotient) + ", Remainder: " + str(remainder)) # prints 
 # 4. Compute and print the area of a rectangle from input width and height.
 # 5. Ask the user for a number, square it, and print.
 # 6. Ask for two integers and print their sum, difference, and product.
-# 7. Take input for base and height of a triangle and compute area.
+# 7. Ask for the base and height of a triangle and compute area.
 # 8. Convert minutes to hours and minutes.
 # 9. Write a Celsius to Kelvin converter.
 # 10. Create a simple tip calculator (bill + tip percentage).
