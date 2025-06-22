@@ -5,8 +5,7 @@
 /*
 In this module, you will learn about data structures and memory management in C, you will first learn 
 about arrays and how to store multiple values, then about strings and string manipulation, then about 
-pointers and memory addresses. In general, each module will consist of 2-4 topics, each with an explanation, a
-few worked examples, and five practice problems, along with ten exercises and a project at the end of the module. 
+pointers and memory addresses. 
 */
 
 #include <stdio.h>
