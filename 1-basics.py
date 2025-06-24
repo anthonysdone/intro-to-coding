@@ -34,7 +34,7 @@ name = input("What's your name? ") # prompts user, and stores result in name
 print("Nice to meet you,", name) # prints out "Nice to meet you, [data stored in name]"
 
 # Practice Problems:
-# 1. Print your favorite quote.
+# 1. Print "Hello, World!". 
 # 2. Print your age.
 # 3. Store your name in a variable and print it.
 # 4. Ask the user for their hometown and print it.
@@ -138,7 +138,8 @@ print("Quotient: " + str(quotient) + ", Remainder: " + str(remainder)) # prints 
 """
 Here you will build a program that computes the roots of a quadratic of the form ax**2 + bx + c using the 
 quadratic calculator. The program will ask the user for a, b, and c, and then return the two roots x = r1, r2. 
-For the purposes of this project, you can assume both roots are real. 
+For the purposes of this project, you can assume both roots are real. Real ones programmed this in BASIC into
+their TI-84's to cheat in algebra. 
 
 The execution of the program in the terminal MUST match the following: 
 

@@ -46,11 +46,52 @@ else:
     print("Access denied")
 
 # Practice Problems:
-# 1. Check if a number is positive, negative, or zero.
+# 1. Ask for a number and check if it is positive, negative, or zero.
 # 2. Ask for age and determine if someone can vote (18+).
-# 3. Check if a number is even or odd using modulo (%).
-# 4. Compare two numbers and print which is larger.
-# 5. Check if a string is empty and print appropriate message.
+# 3. Ask for a number and check if it is even or odd using modulo (%).
+# 4. Ask for two numbers, compare them, and print which is larger.
+# 5. Ask for two strings and check if they are the same. 
+
+# --------------------------------------------------
+# Lists
+# --------------------------------------------------
+
+"""
+Lists are ordered collections of items that can store multiple values in a single variable. Lists are created
+using square brackets [] with items separated by commas. You can access individual items using their index
+(position), starting from 0. Lists are mutable, meaning you can change, add, or remove items after creation.
+Common list methods include append() to add items, remove() to delete items, and len() to get the length.
+You can also use negative indexing to access items from the end of the list (-1 is the last item).
+"""
+
+# Worked Example 1
+fruits = ["apple", "banana", "orange"]  # create a list of strings
+print(fruits[0])        # prints "apple" (first item)
+print(fruits[1])        # prints "banana" (second item)
+print(fruits[-1])       # prints "orange" (last item)
+
+# Worked Example 2
+numbers = [10, 20, 30, 40, 50]
+numbers.append(60)      # add 60 to the end of the list
+numbers[0] = 15         # change first item from 10 to 15
+print(numbers)          # prints [15, 20, 30, 40, 50, 60]
+print(len(numbers))     # prints 6 (length of the list)
+
+# Worked Example 3
+shopping_list = []      # create an empty list
+shopping_list.append("milk")    # add items to the list
+shopping_list.append("bread")
+shopping_list.append("eggs")
+print("Shopping list:", shopping_list)
+shopping_list.remove("bread")   # remove "bread" from the list
+print("Updated list:", shopping_list)
+
+# Practice Problems:
+# 1. Create a list of your 5 favorite colors and print the first and last one.
+# 2. Create a list of numbers 1-5, then change the middle item to 10.
+# 3. Create an empty list, add 3 names to it, then print the length.
+# 4. Create a list of grades and print each grade with its position.
+# 5. Create a list of animals, remove one animal, then add two new ones.
 
 # --------------------------------------------------
 # Loops
@@ -59,7 +100,7 @@ else:
 """
 Loops allow you to repeat code multiple times. There are two main types: "for" loops and "while" loops.
 For loops are used when you know how many times to repeat or want to iterate through a sequence. The basic
-syntax is "for variable in range(number):" or "for variable in sequence:". While loops continue as long
+syntax is "for variable in range(number):" or "for variable in list:". While loops continue as long
 as a condition is true, using "while condition:". Be careful with while loops to avoid infinite loops by
 ensuring the condition eventually becomes false.
 """
@@ -84,10 +125,10 @@ print("Sum:", total)
 
 # Practice Problems:
 # 1. Print numbers from 1 to 10 using a for loop.
-# 2. Calculate the factorial of a number using a loop.
+# 2. Calculate the factorial of an inputted number using a loop. 
 # 3. Ask user for numbers until they enter 0, then print the sum.
 # 4. Print all even numbers from 2 to 20.
-# 5. Count how many times letter 'a' appears in a word.
+# 5. Count how many times letter 'a' appears in an inputted word.
 
 # --------------------------------------------------
 # Functions
@@ -126,25 +167,25 @@ print(is_even(4))             # prints True
 print(is_even(7))             # prints False
 
 # Practice Problems:
-# 1. Write a function that squares a number and returns the result.
+# 1. Write a function that takes a number and returns its square.
 # 2. Create a function that takes two numbers and returns the larger one.
 # 3. Write a function that converts Celsius to Fahrenheit.
-# 4. Create a function that checks if a string is a palindrome.
+# 4. Create a function that checks if a string is a palindrome (strings can be indexed just like lists).
 # 5. Write a function that calculates the area of a circle given radius.
 
 # --------------------------------------------------
 # Exercises
 # --------------------------------------------------
 
-# 1. Write a program that asks for a number and prints if it's positive, negative, or zero.
-# 2. Create a guessing game where user tries to guess a number between 1-10.
-# 3. Print the multiplication table for a number entered by the user.
-# 4. Write a function that returns the maximum of three numbers.
-# 5. Create a program that counts vowels in a sentence.
-# 6. Write a function that checks if a year is a leap year.
-# 7. Create a simple menu system using if/elif statements.
+# 1. Write a function that checks if a number is prime.
+# 2. Write a program that prints the Fibonacci sequence up to N terms (Nth term is the sum of the two preceding terms).
+# 3. Write a function that takes a list of numbers and returns the average.
+# 4. Write a function that takes a string and returns the number of words in it.
+# 5. Write a function that counts vowels in it's input.
+# 6. Write a function that takes a list and returns the maximum value.
+# 7. Write a function that takes a string and returns the number of occurrences of each character.
 # 8. Write a program that finds the sum of all numbers from 1 to N.
-# 9. Create a function that reverses a string.
+# 9. Write a function that reverses a string.
 # 10. Write a program that asks for passwords until correct one is entered.
 
 # --------------------------------------------------

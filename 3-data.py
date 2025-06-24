@@ -10,45 +10,61 @@ finally searching, sorting, and time complexity.
 """
 
 # --------------------------------------------------
-# Lists
+# Lists II
 # --------------------------------------------------
 
 """
-Lists are ordered collections of items that can be changed (mutable). You create a list using square brackets
-with items separated by commas: [item1, item2, item3]. You can access items using their index (position)
-starting from 0, so list[0] gets the first item. Lists can store any type of data and even mix types.
-You can add items with append(), remove items with remove() or pop(), and check if an item exists using
-"in". Lists are very flexible and one of the most commonly used data structures in Python.
+Building on basic list operations from Module 2, this section covers advanced list techniques including
+slicing, list methods, nested lists, and list manipulation with loops and conditionals. List slicing uses
+the syntax list[start:end:step] to extract portions of lists. Methods like insert(), pop(), index(), 
+count(), and reverse() provide powerful ways to manipulate lists. Nested lists (lists within lists) 
+allow you to create 2D structures like matrices or tables. You can combine lists with conditional 
+statements and loops to filter, transform, and analyze data efficiently.
 """
 
-# Worked Example 1
-fruits = ["apple", "banana", "cherry"]  # create a list with 3 strings
-print(fruits[0])        # prints "apple" (first item)
-print(fruits[1])        # prints "banana" (second item)
-print(len(fruits))      # prints 3 (number of items)
+# Worked Example 1 - Advanced List Slicing
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(numbers[2:6])     # prints [2, 3, 4, 5] (elements 2 through 5)
+print(numbers[:4])      # prints [0, 1, 2, 3] (first 4 elements)
+print(numbers[6:])      # prints [6, 7, 8, 9] (from index 6 to end)
+print(numbers[::2])     # prints [0, 2, 4, 6, 8] (every 2nd element)
+print(numbers[::-1])    # prints [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] (reversed)
 
-# Worked Example 2
-numbers = [1, 2, 3]     # create a list of numbers
-numbers.append(4)       # add 4 to the end of the list
-numbers.append(5)       # add 5 to the end of the list
-print(numbers)          # prints [1, 2, 3, 4, 5]
-numbers.remove(2)       # remove the number 2 from the list
-print(numbers)          # prints [1, 3, 4, 5]
+# Worked Example 2 - Advanced List Methods
+fruits = ["apple", "banana", "cherry", "date"]
+fruits.insert(1, "apricot")          # insert at specific position
+print(fruits)                        # prints ['apple', 'apricot', 'banana', 'cherry', 'date']
+last_fruit = fruits.pop()            # remove and return last item
+print("Removed:", last_fruit)        # prints "Removed: date"
+print("Apple appears", fruits.count("apple"), "times")  # count occurrences
+fruits.reverse()                     # reverse the list in place
+print("Reversed:", fruits)
 
-# Worked Example 3
-grades = [85, 92, 78, 96, 88]  # list of test scores
-total = 0
-for grade in grades:           # loop through each grade
-    total += grade             # add each grade to total
-average = total / len(grades)  # calculate average
-print("Average grade:", average)  # prints the calculated average
+# Worked Example 3 - Nested Lists and Data Processing
+grades = [
+    ["Alice", 85, 92, 78],
+    ["Bob", 90, 88, 95],
+    ["Charlie", 78, 85, 90]
+]
+# Calculate average grade for each student
+for student in grades:
+    name = student[0]
+    scores = student[1:4]           # slice to get just the scores
+    average = sum(scores) / len(scores)
+    if average >= 90:
+        grade = "A"
+    elif average >= 80:
+        grade = "B"
+    else:
+        grade = "C"
+    print(f"{name}: {average:.1f} - Grade {grade}")
 
 # Practice Problems:
-# 1. Create a list of your 5 favorite movies and print the first one.
-# 2. Make a list of numbers 1-10, then remove the number 5.
-# 3. Create an empty list, add 3 items, then print the length.
-# 4. Check if "python" is in a list of programming languages.
-# 5. Create a list of mixed data types (string, int, float).
+# 1. Create a list of 10 numbers and print every 3rd element using slicing.
+# 2. Use insert() to add an item at the beginning and middle of a list.
+# 3. Create a nested list representing a 3x3 tic-tac-toe board.
+# 4. Find and print the index of the maximum value in a list of numbers.
+# 5. Create a list of words and use loops to find all words longer than 5 characters.
 
 # --------------------------------------------------
 # Dictionaries and Tuples
@@ -196,38 +212,73 @@ for i in data:                           # O(n²) - quadratic time, nested loops
 # 10. Create a gradebook dictionary and calculate letter grades for each student.
 
 # --------------------------------------------------
-# Project: Contact Book Manager
+# Project: Sort Visualizer with Histogram Display
 # --------------------------------------------------
 
 """
-Create a contact book program that stores people's information using dictionaries and lists. The program
-should allow users to add contacts, search for contacts, display all contacts, and remove contacts.
-Each contact should store name, phone, and email in a dictionary.
+Create a sorting algorithm visualizer that displays data as horizontal histograms using asterisks and shows each swap operation step-by-step.
+
+To do this: 
+1. Create a visualizer function that displays arrays as horizontal histograms
+2. Implement several sorting algorithm functions that show each swap
+3. Create a main function with user interaction for array size and algorithm choice
+
+Required imports: import random, import time
 
 The execution of the program in the terminal MUST match the following:
 
-Contact Book Manager
-1. Add Contact
-2. Search Contact
-3. Display All Contacts
-4. Remove Contact
-5. Exit
-Choose option (1-5): [user input]
+Sort Visualizer
+===============
+Enter array size: 6
 
-For Add Contact:
-Enter name: [user input]
-Enter phone: [user input]
-Enter email: [user input]
-Contact added successfully!
+Generated random array: [7, 3, 8, 2, 9, 1]
 
-For Search Contact:
-Enter name to search: [user input]
-Found: [name] - [phone] - [email]
+Starting Array:
+7: *******
+3: ***
+8: ********
+2: **
+9: *********
+1: *
 
-For Display All:
-All Contacts:
-[name] - [phone] - [email]
-[name] - [phone] - [email]
+Choose sorting algorithm:
+1. Bubble Sort
+2. Insertion Sort  
+3. Merge Sort
+4. Stalin Sort
+Enter choice: 1
 
-[repeat until user chooses 5 to exit]
+Starting Bubble Sort...
+
+Step 1 - Comparing positions 0 and 1:
+7: *******
+3: ***
+8: ********
+2: **
+9: *********
+1: *
+
+Swapping 7 and 3...
+
+After swap:
+3: ***
+7: *******
+8: ********
+2: **
+9: *********
+1: *
+
+[Continue showing each swap until sorted]
+
+Final sorted array:
+1: *
+2: **
+3: ***
+7: *******
+8: ********
+9: *********
+
+Bubble Sort completed!
+
+Try again? (y/n): [user input]
 """
