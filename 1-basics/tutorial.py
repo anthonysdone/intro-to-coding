@@ -73,7 +73,7 @@ print("Area: ", area) # prints "Area: [area_s]"
 
 # Practice Problems:
 # 1. Ask the user for their name, then age, and print both. 
-# 2. Ask the user for their GPA, and 
+# 2. Ask the user for their favorite number, convert it to an int, and print it.
 # 3. Create an float storing height and convert it to a string. 
 # 4. Multiply two integers and print the result.
 # 5. Add a float and int, convert the sum to a string, and print the result.
